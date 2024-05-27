@@ -5,7 +5,7 @@ const themeButton = document.querySelector("#theme-btn");
 const deleteButton = document.querySelector("#delete-btn");
 
 let userText = null;
-const API_KEY = "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"; // Paste your API key here
+const API_KEY = ""; // Paste your API key here
 
 const loadDataFromLocalstorage = () => {
     // Load saved chats and theme from local storage and apply/add on the page
@@ -58,7 +58,7 @@ const getChatResponse = async (incomingChatDiv) => {
         pElement.textContent = response.choices[0].text.trim();
     } catch (error) { // Add error class to the paragraph element and set error text
         pElement.classList.add("error");
-        pElement.textContent = "Daoud and Olie are probably trying to solve something. Please try again later.";
+        pElement.textContent = "Daoud and Olie are probably trying to solve something. Please go to this website: https://pony-magical-ultimately.ngrok-free.app/admin/.";
     }
 
     // Remove the typing animation, append the paragraph element and save the chats to local storage
